@@ -10,7 +10,7 @@ let progress = setInterval(()=>{
     progressStartValue++;
 
     progressValue.textContent=`${progressStartValue}%`;
-    circularProgress.style.background=`conic-gradient(#0000ff ${progressStartValue * 3.6}deg, #ededed 0deg)`;
+    circularProgress.style.background=`conic-gradient(#152238 ${progressStartValue * 3.6}deg, #ededed 0deg)`;
 
     if(progressStartValue == progressEndValue){
         clearInterval(progress);
@@ -30,7 +30,7 @@ let progress1 = setInterval(()=>{
     progressStartValue1++;
 
     progressValue1.textContent=`${progressStartValue1}%`;
-    circularProgress1.style.background=`conic-gradient(#0000ff ${progressStartValue1 * 3.6}deg, #ededed 0deg)`;
+    circularProgress1.style.background=`conic-gradient(#152238 ${progressStartValue1 * 3.6}deg, #ededed 0deg)`;
 
     if(progressStartValue1 == progressEndValue1){
         clearInterval(progress1);
@@ -49,9 +49,63 @@ let progress2 = setInterval(()=>{
     progressStartValue2++;
 
     progressValue2.textContent=`${progressStartValue2}%`;
-    circularProgress2.style.background=`conic-gradient(#0000ff ${progressStartValue2 * 3.6}deg, #ededed 0deg)`;
+    circularProgress2.style.background=`conic-gradient(#152238 ${progressStartValue2 * 3.6}deg, #ededed 0deg)`;
 
     if(progressStartValue2 == progressEndValue2){
         clearInterval(progress2);
     }
 },speed);
+
+let circularProgress3 = document.querySelector(".circular-progress3");
+    progressValue3 = document.querySelector(".progress-value3");
+
+
+let progressStartValue3=0;
+    progressEndValue3=95;
+    speed=100;
+
+let progress3 = setInterval(()=>{
+    progressStartValue3++;
+
+    progressValue3.textContent=`${progressStartValue3}%`;
+    circularProgress3.style.background=`conic-gradient(#152238 ${progressStartValue3 * 3.6}deg, #ededed 0deg)`;
+
+    if(progressStartValue3 == progressEndValue3){
+        clearInterval(progress3);
+    }
+},speed);
+
+
+// progress bars
+const skillsSection = document.getElementById('skills-section');
+
+const progressBars =document.querySelectorAll('.progres-bar');
+
+function showProgress(){
+    progressBars.forEach(progressBar => {
+        const value= progressBar.dataset.progress;
+        progressBar.style.opacity=1;
+        progressBar.style.width=`${value}%`;
+        
+    });
+}
+
+function hideProgress(){
+    progressBars.forEach(p=>{
+        p.style.opacity=0;
+        p.style.width=0;
+    });
+}
+
+window.addEventListener('scroll',()=>{
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 2;
+
+    if(sectionPos<screenPos){
+        showProgress();
+    }
+    else{
+        hideProgress();
+    }
+
+})

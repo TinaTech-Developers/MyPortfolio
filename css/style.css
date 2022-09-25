@@ -1,5 +1,5 @@
 .container-header{
-    background-color: blue !important;
+    background-color:#152238!important;
 }
 
 h1{
@@ -24,7 +24,12 @@ h1{
     text-align: center;
     font-weight: 400;
     margin-bottom: 60px;
+    
     /* font-family: 'Poppins','san-serif'; */
+}
+#pro-skills{
+    margin-top: 20px;
+    text-align: center;
 }
 .mh-proffessional-skills{
     padding-left: 20%;
@@ -78,7 +83,7 @@ h1{
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    background: conic-gradient(#0000ff 3.6deg, #ededed 0deg);
+    background: conic-gradient(#152238 3.6deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,14 +103,14 @@ h1{
     position: relative;
     font-size: 15px;
     font-weight: 600;
-    color: #0000ff;
+    color: #fff;
 }
 .circular-progress1{
     position: relative;
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    background: conic-gradient(#0000ff 3.6deg, #ededed 0deg);
+    background: conic-gradient(#152238 3.6deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,14 +130,14 @@ h1{
     position: relative;
     font-size: 15px;
     font-weight: 600;
-    color: #0000ff;
+    color: #fff;
 }
 .circular-progress2{
     position: relative;
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    background: conic-gradient(#0000ff 3.6deg, #ededed 0deg);
+    background: conic-gradient(#152238 3.6deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,8 +157,36 @@ h1{
     position: relative;
     font-size: 15px;
     font-weight: 600;
-    color: #0000ff;
+    color: #fff;
 }
+.circular-progress3{
+    position: relative;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    background: conic-gradient(#152238 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.circular-progress3::before{
+    content: "";
+    position: absolute;
+    height: 105px;
+    width: 105px;
+    border-radius: 50%;
+    background-color: #303030;
+
+}
+.progress-value3{
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .text{
     font-size: 15px;
     font-weight: 500;
@@ -162,4 +195,42 @@ h1{
     margin: auto;
 }
 
+/* progres bars */
+#skills-section{
+    margin-top: 20px;
+    text-align: center;
+}
+.containur{
+    width: 60%;
+    margin: 0px auto;
 
+}
+
+.progres{
+    width: 100%;
+    height: 10px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.progres .progres-bar{
+    width: 0%;
+    opacity: 0;
+    height: 100%;
+    background-color:#152238;
+    border-radius: 10px;
+    position: relative;
+    transition: all 3.5s;
+}
+
+.progres-bar span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 8px;
+}
+
+p{
+    margin:20px auto 0 auto;
+}
