@@ -109,3 +109,14 @@ window.addEventListener('scroll',()=>{
     }
 
 })
+
+// ------------------popupp--------------------------
+let popupp=document.getElementById('popupp');
+
+function openPopupp(){
+    popupp.classList.add("open-popupp");
+}
+
+function closePopupp(){
+    popupp.classList.remove("open-popupp");
+}
